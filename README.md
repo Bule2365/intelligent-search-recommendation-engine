@@ -30,7 +30,7 @@ dirancang untuk berjalan sepenuhnya lokal di laptop tanpa GPU (Intel i3 / RAM 8G
 
 ```bash
 # 1. Clone & setup environment
-git clone https://github.com/<username>/ecommerce-search-engine.git
+git clone https://github.com/Bule2365/intelligent-search-recommendation-engine.git
 cd ecommerce-search-engine/backend
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt

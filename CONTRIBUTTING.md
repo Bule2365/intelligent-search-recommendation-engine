@@ -6,7 +6,7 @@ tapi disusun supaya bisa dikembangkan lebih lanjut secara kolaboratif.
 ## Setup Development
 
 ```bash
-git clone https://github.com/Bule2365/ecommerce-search-engine.git
+git clone https://github.com/Bule2365/intelligent-search-recommendation-engine.git
 cd ecommerce-search-engine/backend
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
