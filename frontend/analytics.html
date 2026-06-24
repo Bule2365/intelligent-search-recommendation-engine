@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics Dashboard — SearchCommerce</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__brand">🛍️ SearchCommerce</div>
+      <div class="navbar__links">
+        <a href="index.html">Cari</a>
+        <a href="analytics.html">Analytics</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Analytics Dashboard</h1>
+      <p id="dashboard-error"></p>
+
+      <div class="metric-cards">
+        <div class="metric-card">
+          <div class="metric-card__value" id="ctr-value">—</div>
+          <div class="metric-card__label">Click-Through Rate</div>
+        </div>
+      </div>
+
+      <div class="chart-panel">
+        <h3>Funnel Interaksi (Search → View → Click → Cart → Purchase)</h3>
+        <div id="funnel-chart"></div>
+      </div>
+
+      <div class="chart-panel">
+        <h3>Query Pencarian Terpopuler</h3>
+        <div id="top-queries-chart"></div>
+      </div>
+
+      <div class="chart-panel">
+        <h3>Kategori Terpopuler</h3>
+        <div id="top-categories-chart"></div>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/analytics.js"></script>
+  </body>
+</html>

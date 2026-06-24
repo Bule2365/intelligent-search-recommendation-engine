@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cari Produk — E-Commerce Search Engine</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__brand">🛍️ SearchCommerce</div>
+      <div class="navbar__links">
+        <a href="index.html">Cari</a>
+        <a href="analytics.html">Analytics</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Cari produk... (mis. 'hp murah', 'sepatu lari ringan')"
+        />
+        <select id="search-mode">
+          <option value="hybrid" selected>Hybrid</option>
+          <option value="bm25">BM25 (Keyword)</option>
+          <option value="semantic">Semantic</option>
+          <option value="keyword">Keyword Naif</option>
+        </select>
+        <button id="search-button" class="btn btn--primary">Cari</button>
+      </div>
+
+      <p class="results-meta" id="results-meta">Memuat produk...</p>
+      <div class="results-container" id="results-container"></div>
+
+      <h2 class="section-title" id="for-you-title">Rekomendasi untuk Kamu</h2>
+      <div class="rec-grid" id="for-you-container">
+        <p class="empty-state">Memuat rekomendasi...</p>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/recommendations.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

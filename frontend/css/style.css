@@ -1,0 +1,280 @@
+/* style.css
+   ----------
+   Satu file CSS untuk seluruh frontend (search, product, analytics page).
+   Memakai CSS custom properties supaya tema warna konsisten dan mudah
+   diubah dari satu tempat -- tanpa perlu preprocessor (Sass/Less), sesuai
+   filosofi "tanpa build tool" (Bagian 2.3.1). */
+
+:root {
+  --color-bg: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-primary: #2e5c8a;
+  --color-primary-dark: #1f3864;
+  --color-text: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --font: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.navbar {
+  background: var(--color-primary-dark);
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.navbar__links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+.navbar__links a:hover {
+  opacity: 1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ----- Search page ----- */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.search-bar select {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: white;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: white;
+}
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.results-meta {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.product-grid,
+.results-container,
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.product-card,
+.rec-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-decoration: none;
+  color: var(--color-text);
+  box-shadow: var(--shadow);
+  transition: transform 0.1s ease;
+}
+.product-card:hover,
+.rec-card:hover {
+  transform: translateY(-2px);
+}
+
+.product-card__category,
+.rec-card__reason {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.product-card__title,
+.rec-card__title {
+  font-size: 1rem;
+  margin: 6px 0 4px;
+}
+
+.product-card__brand {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.product-card__price,
+.rec-card__price {
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin: 6px 0;
+}
+
+.product-card__rating {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.product-card__score {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin-top: 6px;
+}
+.score-detail {
+  margin-left: 4px;
+}
+
+.section-title {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.empty-state {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ----- Product detail page ----- */
+.product-detail {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.product-detail__category {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+.product-detail__title {
+  margin: 8px 0;
+}
+.product-detail__price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+.product-detail__rating {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+.product-detail__description {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ----- Analytics dashboard ----- */
+.metric-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.metric-card__value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.metric-card__label {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.chart-panel {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.bar-row__label {
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bar-row__track {
+  background: var(--color-bg);
+  border-radius: 6px;
+  height: 14px;
+  overflow: hidden;
+}
+.bar-row__fill {
+  background: var(--color-primary);
+  height: 100%;
+  border-radius: 6px;
+}
+.bar-row__value {
+  text-align: right;
+  color: var(--color-text-muted);
+}
+
+#dashboard-error {
+  color: #b91c1c;
+}

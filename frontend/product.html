@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk — SearchCommerce</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__brand">🛍️ SearchCommerce</div>
+      <div class="navbar__links">
+        <a href="index.html">Cari</a>
+        <a href="analytics.html">Analytics</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="product-detail" id="product-detail">
+        <p>Memuat produk...</p>
+      </div>
+
+      <h2 class="section-title">Produk Serupa</h2>
+      <div class="rec-grid" id="similar-products-container">
+        <p class="empty-state">Memuat rekomendasi...</p>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/recommendations.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>
