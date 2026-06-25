@@ -22,9 +22,32 @@ dirancang untuk berjalan sepenuhnya lokal di laptop tanpa GPU (Intel i3 / RAM 8G
 
 ## Demo
 
-| Search Page                                        | Product Detail            | Analytics Dashboard    |
-| -------------------------------------------------- | ------------------------- | ---------------------- |
-| Hybrid/BM25/Semantic search dengan skor transparan | Rekomendasi produk serupa | Funnel & CTR real-time |
+### 1. Fitur Pencarian (Search Engine)
+
+Aplikasi mendukung berbagai metode pencarian untuk memberikan hasil yang relevan.
+
+| Deskripsi                                   | Tampilan                                                                  |
+| :------------------------------------------ | :------------------------------------------------------------------------ |
+| Tampilan awal sistem (Produk populer)       | ![Tampilan Awal](assets/images/Screenshot%202026-06-24%20220058.png)      |
+| Pencarian kata kunci 'Laptop Programming'   | ![Laptop Programming](assets/images/Screenshot%202026-06-24%20220126.png) |
+| Pencarian kata kunci 'Laptop Keren'         | ![Laptop Keren](assets/images/Screenshot%202026-06-24%20220150.png)       |
+| Multi-method (Semantic, BM25, Keyword Naif) | ![Pencarian Sepatu](assets/images/Screenshot%202026-06-24%20220209.png)   |
+
+---
+
+### 2. Analitik & Visualisasi Data
+
+Pantau interaksi pengguna dan tren pencarian secara _real-time_.
+
+- **Dashboard Interaksi:** Angka kategori interaksi pengguna diperbarui otomatis saat pengguna melakukan klik atau pembelian.
+
+  ![Analytics](assets/images/Screenshot%202026-06-24%20220231.png)
+
+- **Grafik Visual:** Diagram untuk memantau tren Query dan Kategori produk populer.
+
+|                            Query Populer                             |                            Kategori Populer                             |
+| :------------------------------------------------------------------: | :---------------------------------------------------------------------: |
+| ![Query Populer](assets/images/Screenshot%202026-06-24%20220245.png) | ![Kategori Populer](assets/images/Screenshot%202026-06-24%20220256.png) |
 
 ## Quick Start
 
