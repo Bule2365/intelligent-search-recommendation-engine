@@ -58,6 +58,5 @@ yang diinginkan — ini membantu diskusi menemukan pendekatan terbaik untuk skal
 (ingat: proyek ini punya batasan sengaja untuk tetap ringan di hardware terbatas).
 
 ## Kode Etik
-
 Bersikap hormat dan konstruktif. Proyek ini terbuka untuk kontributor dari semua level
 pengalaman.
